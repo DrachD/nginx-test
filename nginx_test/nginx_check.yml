@@ -7,9 +7,9 @@ on:
 jobs:
   check_nginx:
     name: Check Nginx
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
-      - name: Verify Nginx installation
+      - name: Verify Nginx
         run: |
           which nginx && nginx -v || { echo "nginx is not exist"; exit 1; }
