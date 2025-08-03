@@ -2,7 +2,7 @@ name: Nginx Verification
 
 on:
   push:
-    branches: [ nginx_test ]
+    branches: [ main ]
 
 jobs:
   check_nginx:
