@@ -1,0 +1,15 @@
+name: Nginx Verification
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  check_nginx:
+    name: Check Nginx
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Verify Nginx installation
+        run: |
+          which nginx && nginx -v || { echo "nginx is not exist"; exit 1; }
